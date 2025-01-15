@@ -1,0 +1,68 @@
+.container {
+    width: 60%;
+    margin: 50px auto;
+  }
+  
+  table, mat-paginator {
+    background-color: #f8f7f7;
+    -webkit-box-shadow: 3px 10px 23px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 10px 23px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 10px 23px 0px rgba(0, 0, 0, 0.75);
+  }
+  mat-paginator {
+    background-color: rgb(139, 194, 177);
+    -webkit-box-shadow: 3px 10px 23px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 3px 10px 23px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 10px 23px 0px rgba(0, 0, 0, 0.5);
+  }
+  
+  .btn-criar {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: end;
+  }
+  
+  a{  
+    background-color:  rgb(52, 141, 114);
+    color: white
+  }
+  
+  .mat-header-cell, .mat-cell {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .mat-column-nome {
+    width: 15%;
+  }
+  
+  .mat-column-pago {
+    width: 15%; 
+  }
+  .mat-column-data {
+    width: 15%; 
+  }
+  .mat-column-valor {
+    width: 15%; 
+  }
+
+  .mat-column-tipo {
+    width: 15%; 
+  }
+  
+  .mat-column-editar,
+  .mat-column-deletar {
+    width: 10%; 
+  }
+
+  .verde{
+    color: rgb(18, 197, 63);
+    font-weight: 500;
+
+  }
+
+  .vermelho{
+    color: red;
+    font-weight: 500;
+  }

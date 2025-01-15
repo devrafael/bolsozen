@@ -1,0 +1,46 @@
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 50%;
+}
+
+form{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+mat-form-field{
+    width: 20rem;
+    margin: 10px;
+}
+
+.center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.buttons{
+    display: flex;
+}
+
+button{
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:  rgb(52, 141, 114);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 100px
+  }
+  
+  button:hover{
+    background-color:  rgb(55, 119, 97);
+  }

@@ -1,0 +1,29 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  
+  .menu-item {
+    
+    a {
+        text-decoration: none;
+        padding: 10px;
+    }
+  
+  }
+  
+  a {
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .selecionado {
+    color: rgb(52, 141, 114);
+  }
+
+  a:hover {
+    color:white;
+    background-color: rgba(82, 80, 80, 0.5);
+    border-radius: 15px;
+  }
+
+

@@ -1,0 +1,14 @@
+<mat-toolbar>
+    <div class="logo">
+        <span>
+            <strong>BolsoZen</strong>
+            <!-- <img src="/public/icons8-dinheiro-bubbles-96.png" alt=""> -->
+        </span>
+    </div>
+
+    <span class="example-spacer"></span>
+    <div class="menu-item" *ngFor="let m of menu">
+        <a [routerLink]="m.rota" routerLinkActive= "selecionado">{{m.descricao}}</a>
+    </div>
+  </mat-toolbar>
+  

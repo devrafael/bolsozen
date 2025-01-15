@@ -1,0 +1,103 @@
+.flex {
+    display: flex;
+    flex-direction: row;
+    // justify-content: space-evenly;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    height: 300px;
+}
+
+.title {
+    position: relative;
+    font-size: 3rem;
+    top: 24px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.mat-mdc-card {
+    width: 400px;
+    height: 120px;
+}
+
+.input-item {
+    width: 400px;
+    margin: 0 20px;
+
+}
+
+.card-item {
+    display: flex;
+    
+}
+
+.flex-item {
+    padding: 1.2rem;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+.conteudo{
+    font-size: 1.5rem;
+}
+
+.titulo {
+    font-size: 1.6rem;
+    padding: 20px;
+}
+
+.receita {
+    background-color:  rgb(52, 141, 114);
+    color: #fff;
+}
+
+.despesa {
+    background-color: rgb(190, 81, 81);
+    color: #fff;
+}
+
+.saldo {
+    background-color: rgb(35, 127, 177);
+    color: #fff;
+}
+
+// .btn-buscar{
+//     margin-top: 90px;
+//     width: 100px;
+//     height: 30px;
+//     font-size: 16px;
+//     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+//     background-color:  rgb(52, 141, 114);
+//     border: none;
+//     color: white;
+//     border-radius: 5px;
+//     cursor: pointer;
+//   }
+  
+//   .btn-buscar:hover{
+//     background-color:  rgb(55, 119, 97);
+//   }
+
+.btn-buscar {
+    width: 50px;
+    height: 50px;
+    background-color:  rgb(52, 141, 114);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+
+  mat-icon{
+    height: 20px;
+  }
+

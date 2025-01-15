@@ -1,0 +1,22 @@
+<div class="container">
+  <h1 class="center">{{tituloFormulario}}</h1>
+</div>
+
+<div class="container">
+    <form class="example-form" [formGroup]="formCategoria">
+        <mat-form-field class="example-full-width">
+          <mat-label>Categoria</mat-label>
+          <input matInput placeholder="Ex. Alimentação" formControlName="nome">
+        </mat-form-field>
+      
+        <mat-form-field class="example-full-width">
+          <mat-label>Descrição</mat-label>
+          <textarea matInput placeholder="Digite as informações da categoria" formControlName="descricao"></textarea>
+        </mat-form-field>
+      </form>
+    <div class="buttons">
+        <button mat-raised-button [disabled]="!formCategoria.valid" (click)="Salvar()">Salvar</button>
+        <button mat-raised-button (click)="Voltar()">Voltar</button>
+    </div>
+</div>
+  
