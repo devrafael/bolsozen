@@ -6,7 +6,7 @@ import { FormularioEntradasComponent } from './components/formulario-entradas/fo
 const routes: Routes = [
     { path: '', redirectTo:'list', pathMatch: 'full'},
     {path:'list', component: ListEntradasComponent},
-    {path: 'editar/:id', component: FormularioEntradasComponent},
+    {path: 'editar/:id', component: FormularioEntradasComponent, data: { renderMode: 'server'}},
     {path: 'nova-entrada', component: FormularioEntradasComponent}
 
 

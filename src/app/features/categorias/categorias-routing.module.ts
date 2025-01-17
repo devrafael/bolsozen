@@ -6,7 +6,7 @@ import { FormularioComponent } from './components/formulario/formulario.componen
 const routes: Routes = [
   { path: '', redirectTo:'list', pathMatch: 'full'},
   {path:'list', component: ListComponent},
-  {path:'editar/:id', component: FormularioComponent},
+  {path:'editar/:id', component: FormularioComponent, data: { renderMode: 'server'}},
   {path: 'nova-categoria', component: FormularioComponent}
   
 ];
