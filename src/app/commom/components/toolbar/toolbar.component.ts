@@ -2,8 +2,9 @@ import { Component, Input } from '@angular/core';
 import { MatIconModule} from '@angular/material/icon'
 import { MatToolbarModule} from '@angular/material/toolbar'
 import {MatButtonModule} from '@angular/material/button';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { AuthenticationService } from '../../auth/service/authentication.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -20,4 +21,25 @@ import { CommonModule } from '@angular/common';
 })
 export class ToolbarComponent {
     @Input() menu !: any []
+    isLogado: boolean = false
+
+    constructor(private authService: AuthenticationService,
+      private router: Router
+    ){}
+
+  ngOnInit(): void {
+    this.authService.usuarioEstaLogado()
+    .subscribe(estaLogado => {
+      console.log('estaLogado: ' + estaLogado)
+      this.isLogado = estaLogado;
+    })
+  }
+
+  Logout(){
+    this.authService.Sair();
+    this.router.navigate(['authentication', 'login']);
+
+  }
+
+
 }

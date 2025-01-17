@@ -1,0 +1,270 @@
+{
+  "uuid": "fd8fe500-1200-4155-a947-708799a5ec7f",
+  "lastMigration": 33,
+  "name": "Mockoon",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3000,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "19280d96-88eb-4af4-a38b-5383a4ef4d56",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "authentication",
+      "responses": [
+        {
+          "uuid": "e91a5081-8ea2-4528-8c49-ea777a53df0b",
+          "body": "{\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsQGVtYWlsLmNvbSIsInBhc3N3b3JkIjoiMTIzNCJ9.FbveubzyXtsaiizsPwORXwQgoxyS-wiFgfVcc8TD6eo\",\n  \"user\": {\n    \"nome\": \"Rafael\",\n    \"email\": \"email@email.com\",\n    \"id\": 1,\n    \"role\": \"USER\"\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Default response",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "email",
+              "value": "email@email.com",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "password",
+              "value": "1234",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "6e8ce0df-4e8e-44b4-8b01-48e9fe24ad51",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 400,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "email",
+              "value": "email@email.com",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "password",
+              "value": "1234",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "a4b54b55-c1e9-4774-b964-fc0a820afd49",
+      "type": "crud",
+      "documentation": "",
+      "method": "",
+      "endpoint": "entradas",
+      "responses": [
+        {
+          "uuid": "2e25aa69-159f-45bf-aed8-901d4c760229",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "wf9g",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "f6217c43-3ad4-423a-b305-9290ebae1414",
+      "type": "crud",
+      "documentation": "",
+      "method": "",
+      "endpoint": "categorias",
+      "responses": [
+        {
+          "uuid": "e5373460-c86b-4cf1-88d8-48db5224edc1",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "j8xq",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "9c0035b3-784c-4ac6-82b8-81d6d93f8922",
+      "type": "crud",
+      "documentation": "",
+      "method": "",
+      "endpoint": "ano",
+      "responses": [
+        {
+          "uuid": "4d546da9-0a17-4166-9e49-a0500b04756d",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "olbu",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "19280d96-88eb-4af4-a38b-5383a4ef4d56"
+    },
+    {
+      "type": "route",
+      "uuid": "a4b54b55-c1e9-4774-b964-fc0a820afd49"
+    },
+    {
+      "type": "route",
+      "uuid": "f6217c43-3ad4-423a-b305-9290ebae1414"
+    },
+    {
+      "type": "route",
+      "uuid": "9c0035b3-784c-4ac6-82b8-81d6d93f8922"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [
+    {
+      "uuid": "667b6a1a-5f50-42c2-bd8c-9a8f50a4f488",
+      "id": "j8xq",
+      "name": "Categorias",
+      "documentation": "",
+      "value": "[\r\n    {\r\n      \"id\": \"1\",\r\n      \"nome\": \"Moradia\",\r\n      \"descricao\": \"Pagamentos de Contas da Casa\"\r\n    },\r\n    {\r\n      \"id\": \"2\",\r\n      \"nome\": \"Saúde\",\r\n      \"descricao\": \"Plano de Saúde e Remédios\"\r\n    },\r\n    {\r\n      \"id\": \"3\",\r\n      \"nome\": \"Lazer\",\r\n      \"descricao\": \"Cinema, parques, praia, etc\"\r\n    },\r\n    {\r\n      \"id\": \"4\",\r\n      \"nome\": \"Salário\",\r\n      \"descricao\": \"Recebimento de Salário\"\r\n    },\r\n    {\r\n      \"id\": \"5\",\r\n      \"nome\": \"Freelas\",\r\n      \"descricao\": \"Trabalhos como freelancer\"\r\n    },\r\n    {\r\n      \"id\": \"6\",\r\n      \"nome\": \"Outros\",\r\n      \"descricao\": \"Outras despesas\"\r\n    }\r\n  ]"
+    },
+    {
+      "uuid": "6c495f23-c8b3-431f-b9ca-645dcadca8fb",
+      "id": "wf9g",
+      "name": "Entradas",
+      "documentation": "",
+      "value": "[\r\n    {\r\n      \"id\": \"1\",\r\n      \"nome\": \"Gás de Cozinha\",\r\n      \"categoriaId\": 1,\r\n      \"pago\": true,\r\n      \"data\": \"14/03/2023\",\r\n      \"valor\": \"70,80\",\r\n      \"tipo\": \"despesa\",\r\n      \"mes\": 3,\r\n      \"ano\": 2023\r\n    },\r\n    {\r\n      \"id\": \"2\",\r\n      \"nome\": \"Mercado\",\r\n      \"categoriaId\": 2,\r\n      \"pago\": false,\r\n      \"data\": \"14/03/2023\",\r\n      \"valor\": \"15,00\",\r\n      \"tipo\": \"despesa\",\r\n      \"mes\": 3,\r\n      \"ano\": 2023\r\n    },\r\n    {\r\n      \"id\": \"3\",\r\n      \"nome\": \"Salário na Empresa X\",\r\n      \"categoriaId\": 4,\r\n      \"pago\": true,\r\n      \"data\": \"15/03/2023\",\r\n      \"valor\": \"4405,49\",\r\n      \"tipo\": \"receita\",\r\n      \"mes\": 3,\r\n      \"ano\": 2023\r\n    },\r\n    {\r\n      \"id\": \"4\",\r\n      \"nome\": \"Netflix\",\r\n      \"categoriaId\": 3,\r\n      \"pago\": true,\r\n      \"data\": \"16/03/2023\",\r\n      \"valor\": \"15,00\",\r\n      \"tipo\": \"despesa\",\r\n      \"mes\": 3,\r\n      \"ano\": 2023\r\n    },\r\n    {\r\n      \"id\": \"5\",\r\n      \"nome\": \"Mercado\",\r\n      \"categoriaId\": 2,\r\n      \"pago\": true,\r\n      \"data\": \"17/03/2023\",\r\n      \"valor\": \"30,00\",\r\n      \"tipo\": \"despesa\",\r\n      \"mes\": 3,\r\n      \"ano\": 2023\r\n    },\r\n    {\r\n      \"id\": \"6\",\r\n      \"nome\": \"Video Game\",\r\n      \"categoriaId\": 3,\r\n      \"pago\": false,\r\n      \"data\": \"17/03/2023\",\r\n      \"valor\": \"15,00\",\r\n      \"tipo\": \"despesa\",\r\n      \"mes\": 3,\r\n      \"ano\": 2023\r\n    },\r\n    {\r\n      \"id\": \"7\",\r\n      \"nome\": \"Uber\",\r\n      \"categoriaId\": 2,\r\n      \"pago\": true,\r\n      \"data\": \"17/03/2023\",\r\n      \"valor\": \"30,00\",\r\n      \"tipo\": \"despesa\",\r\n      \"mes\": 3,\r\n      \"ano\": 2023\r\n    },\r\n    {\r\n      \"id\": \"8\",\r\n      \"nome\": \"Aluguel\",\r\n      \"categoriaId\": 3,\r\n      \"pago\": false,\r\n      \"data\": \"23/03/2023\",\r\n      \"valor\": \"15,00\",\r\n      \"tipo\": \"despesa\",\r\n      \"mes\": 3,\r\n      \"ano\": 2023\r\n    },\r\n    {\r\n      \"id\": \"9\",\r\n      \"nome\": \"Gás de Cozinha\",\r\n      \"categoriaId\": 2,\r\n      \"pago\": false,\r\n      \"data\": \"25/03/2023\",\r\n      \"valor\": \"30,00\",\r\n      \"tipo\": \"despesa\",\r\n      \"mes\": 3,\r\n      \"ano\": 2023\r\n    },\r\n    {\r\n      \"id\": \"10\",\r\n      \"nome\": \"Pagamento Pelo Projeto XYZ\",\r\n      \"categoriaId\": 5,\r\n      \"pago\": true,\r\n      \"data\": \"25/03/2023\",\r\n      \"valor\": \"2980,00\",\r\n      \"tipo\": \"receita\",\r\n      \"mes\": 3,\r\n      \"ano\": 2023\r\n    },\r\n    {\r\n      \"id\": \"11\",\r\n      \"nome\": \"Netflix\",\r\n      \"categoriaId\": 3,\r\n      \"pago\": false,\r\n      \"data\": \"07/04/2023\",\r\n      \"valor\": \"15,00\",\r\n      \"tipo\": \"despesa\",\r\n      \"mes\": 4,\r\n      \"ano\": 2023\r\n    },\r\n    {\r\n      \"id\": \"12\",\r\n      \"nome\": \"Video Game\",\r\n      \"categoriaId\": 2,\r\n      \"pago\": true,\r\n      \"data\": \"17/04/2023\",\r\n      \"valor\": \"30,00\",\r\n      \"tipo\": \"despesa\",\r\n      \"mes\": 4,\r\n      \"ano\": 2023\r\n    },\r\n    {\r\n      \"id\": \"13\",\r\n      \"nome\": \"Cinema\",\r\n      \"categoriaId\": 3,\r\n      \"pago\": true,\r\n      \"data\": \"18/04/2023\",\r\n      \"valor\": \"15,00\",\r\n      \"tipo\": \"despesa\",\r\n      \"mes\": 4,\r\n      \"ano\": 2023\r\n    },\r\n    {\r\n      \"id\": \"14\",\r\n      \"nome\": \"Gasolina\",\r\n      \"categoriaId\": 2,\r\n      \"pago\": false,\r\n      \"data\": \"21/04/2023\",\r\n      \"valor\": \"130,00\",\r\n      \"tipo\": \"despesa\",\r\n      \"mes\": 4,\r\n      \"ano\": 2023\r\n    },\r\n    {\r\n      \"id\": \"15\",\r\n      \"nome\": \"Uber\",\r\n      \"categoriaId\": 3,\r\n      \"pago\": true,\r\n      \"data\": \"28/04/2023\",\r\n      \"valor\": \"15,00\",\r\n      \"tipo\": \"despesa\",\r\n      \"mes\": 4,\r\n      \"ano\": 2023\r\n    }\r\n  ]"
+    },
+    {
+      "uuid": "8b413275-de5a-424d-a506-501b23c86b40",
+      "id": "olbu",
+      "name": "Ano",
+      "documentation": "",
+      "value": "[\n    {\n      \"id\": 1,\n      \"ano\": 2020\n    },\n    {\n      \"id\": 2,\n      \"ano\": 2021\n    },\n    {\n      \"id\": 3,\n      \"ano\": 2022\n    },\n    {\n      \"id\": 4,\n      \"ano\": 2023\n    },\n    {\n      \"id\": 5,\n      \"ano\": 2024\n    },\n    {\n      \"id\": 6,\n      \"ano\": 2025\n    }\n]"
+    }
+  ],
+  "callbacks": []
+}
