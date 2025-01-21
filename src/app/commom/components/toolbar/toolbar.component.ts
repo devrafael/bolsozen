@@ -30,7 +30,6 @@ export class ToolbarComponent {
   ngOnInit(): void {
     this.authService.usuarioEstaLogado()
     .subscribe(estaLogado => {
-      console.log('estaLogado: ' + estaLogado)
       this.isLogado = estaLogado;
     })
   }

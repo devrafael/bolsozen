@@ -1,7 +1,6 @@
 import { Injectable, Injector } from '@angular/core';
 import { HttpBaseService } from '../../../shared/base/http-base.service';
 import { Observable } from 'rxjs';
-import { Entrada } from '../components/dashboard/models/entrada.model';
 
 @Injectable({
   providedIn: 'root'

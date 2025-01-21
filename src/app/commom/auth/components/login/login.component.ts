@@ -47,7 +47,6 @@ Login(){
 
   this.authService.login({email:this.authLogin.email, password: this.authLogin.password})
   .subscribe((user) => {
-    console.log(user)
     if(user?.id){
       this.router.navigateByUrl('dashboard');
     }

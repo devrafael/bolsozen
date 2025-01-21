@@ -28,13 +28,32 @@ export class AuthenticationService extends HttpBaseService{
   }
 
   usuarioEstaLogado(){
+    if(typeof window !== 'undefined' && sessionStorage){
       const token = sessionStorage.getItem('token')
       if (token){
         this.subjectLogin.next(true)
-      }
-
-      return this.subjectLogin.asObservable()
+      }else {
+              this.subjectLogin.next(false);
+            }
+    }
+    return this.subjectLogin.asObservable()
   }
+
+  // usuarioEstaLogado(): Observable<boolean> {
+  //   if (typeof window !== 'undefined' && sessionStorage) { // Verifica se está no navegador
+  //     const token = sessionStorage.getItem('token');
+  //     if (token) {
+  //       this.subjectLogin.next(true);
+  //     } else {
+  //       this.subjectLogin.next(false);
+  //     }
+  //   } else {
+  //     // Caso o código esteja no servidor ou em outro ambiente
+  //     this.subjectLogin.next(false);
+  //   }
+  
+  //   return this.subjectLogin.asObservable();
+  // }
 
   getUsuario(){
     	this.subjectUsuario.asObservable()
