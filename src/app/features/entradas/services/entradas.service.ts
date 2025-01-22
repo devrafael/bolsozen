@@ -39,9 +39,5 @@ export class EntradasService extends HttpBaseService{
     return this.httpPost('ano', ano);
   }
 
-  buscarAnosCadastrados(): Observable<any>{
-    return this.httpGet('ano')
-  }
-
 
 }

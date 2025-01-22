@@ -13,14 +13,13 @@ export class DashboardService extends HttpBaseService{
     super(injector);
   }
 
-  getEntradas(payload?: any): Observable<any>{
-    const params = payload? `?mes=${payload.mes}&ano=${payload.ano}` :  ''
-    return this.httpGet(`${this.endpoint}${params}`);
+
+  getEntradas(): Observable<any>{
+    return this.httpGet(`${this.endpoint}`);
   }
 
-  getAno(ano: number): Observable<any>{
-
-    return this.httpGet(`${this.endpoint}?ano=${ano}`)
+  buscarAnosCadastrados(): Observable<any>{
+    return this.httpGet('ano')
   }
 
 
