@@ -7,22 +7,22 @@
         <mat-form-field class="example-full-width">
           <mat-label>Email</mat-label>
           <input type="email" matInput
-                 placeholder="Ex. email@example.com" formControlName="email">
+                 placeholder="Ex. email@example.com" formControlName="email" id="email">
         <mat-error>Email is <strong>required</strong></mat-error>
         </mat-form-field>
     
         <mat-form-field class="example-full-width">
             <mat-label>Password</mat-label>
-            <input type="password" matInput formControlName="password">
+            <input type="password" matInput formControlName="password" id="password">
           <mat-error>Password is <strong>required</strong></mat-error>
           </mat-form-field>
       </form>
 
       <div class="btn-container">
-        <button mat-raised-button class="btn-buscar" (click)="Login()">
+        <button mat-raised-button class="btn-buscar" (click)="Login()" [disabled]="loginForm.invalid">
             Login
         </button>
-        <button mat-raised-button class="btn-buscar">
+        <button mat-raised-button class="btn-cadastrar">
             Cadastro
         </button>
     </div>

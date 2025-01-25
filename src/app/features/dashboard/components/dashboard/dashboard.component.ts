@@ -57,6 +57,7 @@ export class DashboardComponent implements OnInit {
   constructor(
     private dashboardService: DashboardService,
     private formBuilder: FormBuilder  ) {}
+    
   ngOnInit(): void {
     this.criarFormulario();
     this.buscarAnos();
@@ -73,13 +74,14 @@ export class DashboardComponent implements OnInit {
       ano: this.formDashboard.controls["ano"].value,
     };
 
+
     this.dashboardService
       .getEntradas()
-      .pipe(
+      .pipe( 
         map((entradas: Entrada[]) =>
-          entradas.filter(
+            entradas.filter(
             (entrada: Entrada) =>
-              entrada.ano === payload.ano && entrada.mes === payload.mes
+              (entrada.ano === payload.ano && entrada.mes === payload.mes) 
           )
         )
       )

@@ -21,7 +21,6 @@ export class AuthenticationService extends HttpBaseService{
         sessionStorage.setItem('token', resposta.token);
         this.subjectUsuario.next(resposta.user);
         this.subjectLogin.next(true)
-
         return resposta.user
 
       })

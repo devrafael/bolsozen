@@ -5,12 +5,14 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 
 
+
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
   ]
 })
 export class DashboardModule { }
