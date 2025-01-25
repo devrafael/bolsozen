@@ -17,15 +17,18 @@ export class AuthenticationService extends HttpBaseService{
 
   login(login: Login): Observable<any>{
     return this.httpPost('authentication', login).pipe(
-      map((resposta) => {
+      map((resposta: any) => {
         sessionStorage.setItem('token', resposta.token);
         this.subjectUsuario.next(resposta.user);
         this.subjectLogin.next(true)
+
         return resposta.user
 
       })
     )
   }
+
+  
 
   usuarioEstaLogado(){
     if(typeof window !== 'undefined' && sessionStorage){
@@ -38,22 +41,6 @@ export class AuthenticationService extends HttpBaseService{
     }
     return this.subjectLogin.asObservable()
   }
-
-  // usuarioEstaLogado(): Observable<boolean> {
-  //   if (typeof window !== 'undefined' && sessionStorage) { // Verifica se está no navegador
-  //     const token = sessionStorage.getItem('token');
-  //     if (token) {
-  //       this.subjectLogin.next(true);
-  //     } else {
-  //       this.subjectLogin.next(false);
-  //     }
-  //   } else {
-  //     // Caso o código esteja no servidor ou em outro ambiente
-  //     this.subjectLogin.next(false);
-  //   }
-  
-  //   return this.subjectLogin.asObservable();
-  // }
 
   getUsuario(){
     	this.subjectUsuario.asObservable()
