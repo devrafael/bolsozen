@@ -1,0 +1,58 @@
+<div class="container-forms">
+  <form [formGroup]="formDashboard">
+    <div>
+      <mat-form-field appearance="outline" class="input-item">
+        <mat-label>Mês</mat-label>
+        <mat-select formControlName="mes">
+          <mat-option value="">Mês</mat-option>
+          <mat-option *ngFor="let mes of meses" [value]="mes.monthCode">{{
+            mes.description
+          }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field appearance="outline" class="input-item">
+        <mat-label>Ano</mat-label>
+        <mat-select formControlName="ano">
+          <mat-option value="">Ano</mat-option>
+          <mat-option *ngFor="let a of anos" [value]="a.value">{{
+            a.viewValue
+          }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="filter">
+      <mat-form-field appearance="outline">
+        <mat-label>Status</mat-label>
+        <mat-select formControlName="status">
+          <mat-option value="">Status</mat-option>
+          <mat-option [value]="true">Pago</mat-option>
+          <mat-option [value]="false">Pendente</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="filter">
+      <mat-form-field appearance="outline">
+        <mat-label>Categoria</mat-label>
+        <mat-select formControlName="categoryId">
+          <mat-option value="">Categoria</mat-option>
+          <mat-option
+            *ngFor="let cat of categories$ | async"
+            value="{{ cat.categoryId }}"
+            >{{ cat.categoryName  | capitalize}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="btn-container">
+      <button mat-raised-button class="btn-buscar" (click)="getRegistries()">
+        <mat-icon>search</mat-icon>
+      </button>
+    </div>
+  </form>
+</div>

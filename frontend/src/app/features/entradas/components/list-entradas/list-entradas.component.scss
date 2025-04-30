@@ -1,0 +1,116 @@
+.container {
+  // width: 100%;
+  margin: 50px 50px;
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+}
+
+.container-registries{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 10%;
+  margin-top: 20px;
+}
+table,
+mat-paginator {
+  border: 1px solid;
+  border-bottom: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+}
+mat-paginator {
+  background-color: rgb(52, 141, 114);
+
+  
+}
+
+td,th{
+  text-align: center;
+  vertical-align: middle;
+}
+
+.title {
+  font-size: 2rem;
+  top: 24px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color:#000000;
+  font-family: "Poppins", sans-serif;
+}
+
+
+.container-buttons{
+  display: flex;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.btn-criar {
+  display: flex;
+  justify-content: end;
+  pointer-events: none;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+a {
+  background-color: rgb(52, 141, 114);
+  color: white;
+  pointer-events: auto;
+}
+
+.mat-header-cell,
+.mat-cell {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.mat-column-nome {
+  // border-left: 1px solid ;
+  width: 15%;
+}
+
+.mat-column-pago {
+  width: 15%;
+}
+.mat-column-data {
+  width: 15%;
+}
+.mat-column-valor {
+  width: 15%;
+}
+
+.mat-column-tipo {
+  width: 15%;
+}
+
+.mat-column-editar,
+.mat-column-deletar {
+  width: 10%;
+}
+
+.verde {
+  background-color: rgb(84, 179, 150);
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+}
+
+.vermelho {
+  background-color: rgb(224, 111, 111);
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+mat-form-field{
+  width: 150px;
+  margin-right: 10px;
+}
+.mat-mdc-select{
+  color: white;
+}
+
+

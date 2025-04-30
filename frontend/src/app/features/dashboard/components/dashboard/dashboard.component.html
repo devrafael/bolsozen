@@ -1,0 +1,63 @@
+<h1 class="title">Dashboard</h1>
+<div class="container-global">
+    <div class="container-cards">
+      <div class="card-item">
+        <mat-card>
+          <mat-card-header class="center">
+            <mat-card-title class="titulo"> Receitas </mat-card-title>
+          </mat-card-header>
+
+          <mat-card-content class="center receita">
+            {{ receita | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <div class="card-item">
+        <mat-card >
+          <mat-card-header class="center">
+            <mat-card-title class="titulo"> Despesas </mat-card-title>
+          </mat-card-header>
+
+          <mat-card-content class="center despesa">
+            {{ despesa | currency:'BRL':'symbol':'1.2-2':'pt-BR'  }}
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <div class="card-item">
+        <mat-card >
+          <mat-card-header class="center">
+            <mat-card-title class="titulo"> Saldo </mat-card-title>
+          </mat-card-header>
+
+          <mat-card-content class="center saldo">
+            {{ saldo | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+
+  <div class="container-graphics">
+    <div>
+      <h2 style="text-align: center;">Montante total por categoria</h2>
+      <div
+        class="graphic-category flex-item"
+        echarts
+        [options]="graphicCategoriesOptions"
+        (chartInit)="detailsCategory($event)"
+      ></div>
+    </div>
+
+    <div>
+      <h2>Detalhe dos registros por categoria</h2>
+      <p>Categoria selecionada: {{categorySelected | capitalize}}</p>
+      <div
+        class="graphic-category flex-item"
+        echarts
+        [options]="graphicDetailsCategoriesOptions"
+        (chartInit)="detailsCategory($event)"
+      ></div>
+    </div>
+  </div>
+</div>

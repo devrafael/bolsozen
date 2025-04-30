@@ -1,0 +1,85 @@
+
+.container-global{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 600px;
+}
+
+.header {
+    height: 300px;
+}
+
+
+.mat-mdc-card {
+    width: 500px;
+    height: 100px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
+}
+
+.container-cards {
+    display: flex;
+    column-gap: 30px;
+}
+
+
+.center {
+    margin: 0 auto;
+}
+
+
+.titulo {
+    font-size: 1.4rem;
+    padding: 10px;
+}
+
+.receita {
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.despesa {
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+}
+
+.saldo {
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+  mat-icon{
+    height: 20px;
+  }
+
+  .graphic-category{
+    width: 600px;
+    height: 450px;
+  }
+
+  .container-graphics{
+    background-color: #f4f3f6;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
+    border-radius: 15px;
+    column-gap: 100px;
+  }
+  .title {
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    margin-top: 0;
+  }
+
+
+  h2, p{
+    text-align: center;
+  }

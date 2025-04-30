@@ -1,0 +1,16 @@
+<div class="container-mat-toolbar">
+    <mat-toolbar>
+      <div class="logo">
+        <strong>BolsoZen</strong>
+      </div>
+    
+      <div class="menu-item" *ngFor="let m of menu">
+        <a [routerLink]="m.rota" routerLinkActive="selecionado">{{
+          m.descricao
+        }}</a>
+      </div>
+      <div class="menu-item">
+        <a (click)="Logout()">Sair</a>
+      </div>
+    </mat-toolbar>
+</div>
